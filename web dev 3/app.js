@@ -20,8 +20,13 @@
 // console.log("Total Memory:", totalMemory);
 // console.log("Uptime:", uptime);
 
-const chalk = require("chalk");
-console.log(chalk.blue("Hello World"));
-console.log(chalk.red("Error:Something went wrong!"));
-console.log(chalk.green("Success: Operation completed successfully"));
-console.log(chalk.yellow("Warning: This action may have not work"));
+// const chalk = require("chalk");
+// console.log(chalk.blue("Hello World"));
+// console.log(chalk.red("Error:Something went wrong!"));
+// console.log(chalk.green("Success: Operation completed successfully"));
+// console.log(chalk.yellow("Warning: This action may have not work"));
+
+requestAnimationFrame("dotenv").config();
+const prcess = require("process");
+// const name = process.argv[2];
+console.log(process.env.PORT)
