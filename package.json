@@ -1,0 +1,26 @@
+{
+  "name": "web-dev-3-main",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000W\u0000E\u0000B\u0000-\u0000D\u0000E\u0000V\u0000-\u0000N\u0000O\u0000D\u0000E\u0000J\u0000S\u0000-\u0000E\u0000X\u0000P\u0000R\u0000E\u0000S\u0000S\u0000-\u0000J\u0000S\u0000-\u0000\r\u0000 \u0000#\u0000 \u0000W\u0000E\u0000B\u0000-\u0000D\u0000E\u0000V\u0000-\u0000N\u0000O\u0000D\u0000E\u0000J\u0000S\u0000-\u0000E\u0000X\u0000P\u0000R\u0000E\u0000S\u0000S\u0000-\u0000J\u0000S\u0000-\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himanshusainicse-bit/WEB-DEV-NODEJS-EXPRESS-JS-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/himanshusainicse-bit/WEB-DEV-NODEJS-EXPRESS-JS-/issues"
+  },
+  "homepage": "https://github.com/himanshusainicse-bit/WEB-DEV-NODEJS-EXPRESS-JS-#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
