@@ -1,18 +1,25 @@
 const fs = require('fs');
 const path = require('path');
-const tourFilePath = path.join(__dirname, '../data/tour.json');
+const toursFilePath = path.join(__dirname, '../data/tours.json');
 
-const getAllTours = () => {
-  const toursData = fs.readFileSync(tourFilePath, 'utf-8');
-  return JSON.parse(toursData);
-}
+const getAll = () => {
+    const toursData = fs.readFileSync(toursFilePath, 'utf-8');
+    return JSON.parse(toursData);
+};
 
 const getById = (id) => {
-  const tours = getAllTours();
-  return tours.find(tour => tour.id === id);
+    const tours = getAll();
+    return tours.find(tour => tour.id === id);
 }
 
-module.exports = {
-  getAllTours,
-  getById
+const getByQuery = (query) => {
+    const tours = getAll();
+    return tours.filter(tour => tour.name.includes(query));
 };
+
+module.exports = {
+    getAll,
+    getById
+};
+
+// index.js --> routes/tourRoutes.js --> controller/tourController.js --> model/tourModel.js
