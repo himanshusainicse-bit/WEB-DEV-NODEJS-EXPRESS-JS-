@@ -19,6 +19,14 @@ router.post('/tours', (req, res) => {
     res.status(201).json({ message: 'Tour saved successfully' });
 });
 
+
+router.put('/tours/:id', (req, res) => {
+    const tourId = parseInt(req.params.id);
+    const updatedTour = req.body;
+    tourController.updateTour(tourId, updatedTour);
+    res.json({ message: 'Tour updated successfully' });
+});
+
 module.exports = router;
 
 // in postman, use http://localhost:3000/api/tours to get all the tours

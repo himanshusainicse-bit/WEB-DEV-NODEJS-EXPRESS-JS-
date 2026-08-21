@@ -17,9 +17,28 @@ const getByQuery = (query) => {
     return tours.filter(tour => tour.name.includes(query));
 };
 
+const saveTour = (tour) => {
+    const tours = getAll();
+    tours.push(tour);
+    fs.writeFileSync(toursFilePath, JSON.stringify(tours, null, 2), 'utf-8');
+}
+
+const updateTour = (id, updatedTour) => {
+    const tours = getAll();
+    const index = tours.findIndex(tour => tour.id === id);
+    if (index !== -1) {
+        tours[index] = { ...tours[index], ...updatedTour };
+        fs.writeFileSync(toursFilePath, JSON.stringify(tours, null, 2), 'utf-8');
+    }
+};
+
+
 module.exports = {
     getAll,
-    getById
+    getById,
+    getByQuery,
+    saveTour,
+    updateTour
 };
 
 // index.js --> routes/tourRoutes.js --> controller/tourController.js --> model/tourModel.js
