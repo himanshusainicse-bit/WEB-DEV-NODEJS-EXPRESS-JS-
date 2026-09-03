@@ -27,6 +27,10 @@ router.put('/tours/:id', (req, res) => {
     res.json({ message: 'Tour updated successfully' });
 });
 
+router.delete('/tours/:id',tourController.deleteTour);
+
+
+
 module.exports = router;
 
 // in postman, use http://localhost:3000/api/tours to get all the tours

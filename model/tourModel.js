@@ -32,13 +32,33 @@ const updateTour = (id, updatedTour) => {
     }
 };
 
+const deleteTour = (id) => {
+    const tours = getAll();
+
+    const index = tours.findIndex(tour => tour.id === id);
+
+    if (index === -1) {
+        return null;
+    }
+
+    tours.splice(index, 1);
+
+    fs.writeFileSync(
+        toursFilePath,
+        JSON.stringify(tours, null, 2),
+        'utf-8'
+    );
+
+    return true;
+};
 
 module.exports = {
     getAll,
     getById,
     getByQuery,
     saveTour,
-    updateTour
+    updateTour,
+    deleteTour
 };
 
 // index.js --> routes/tourRoutes.js --> controller/tourController.js --> model/tourModel.js
